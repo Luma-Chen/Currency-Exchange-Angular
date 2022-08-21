@@ -1,6 +1,6 @@
 # Currency-Exchange-Angular
 
-To run the application, write on the terminal with your project's correct path: 
+To run the application, write the following on the terminal, with your project's correct path: 
 <br>
 
 ```
