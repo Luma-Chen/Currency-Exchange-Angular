@@ -17,6 +17,11 @@
     margin-top: 3rem;
 }
 
+.line-submitted {
+    border-bottom: 1px solid #07B0FB;;
+    margin: 1rem;
+}
+
 input {
     background-color: #F4F4F4;
     width: 80%;
@@ -29,6 +34,7 @@ input {
 }
 
 button {
+    cursor: pointer;
     margin-top: 2.5rem;
     background-color: #07B0FB;
     border-radius: 2rem;

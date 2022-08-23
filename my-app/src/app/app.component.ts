@@ -14,6 +14,7 @@ export class AppComponent {
   from_symbol: string = '';
   to_symbol: string = '';
   http: any;
+  currency:string= '';
 
   constructor(
     private apisService: ApisService,

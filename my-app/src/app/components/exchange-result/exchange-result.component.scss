@@ -1,0 +1,86 @@
+.line {
+    border-bottom: 1px solid #E5E5E5;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 1.5rem 4rem 1.5rem;
+    font-family: 'Roboto';
+}
+
+.time {
+    margin-top: 0rem;
+    font-weight: normal;
+}
+
+.align-right {    
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.marginCurrency {
+    margin-top: -5rem;
+}
+
+.align-left {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    cursor: pointer;
+    align-items: baseline;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.color {
+    color: #07B0FB;
+    font-style: normal;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.size {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.rectangle {
+    width: 85%;
+    height: 5rem;
+    background-color: rgba(7, 176, 251, 0.1);
+    display: inline-block;
+    align-self: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.margin {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.lineBlue {
+    border-bottom: 2px solid #07B0FB;
+    margin-top: -1rem;
+}

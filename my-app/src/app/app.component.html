@@ -12,10 +12,10 @@
     (ngSubmit)="onSubmit(formCurrency)"
   >
     <div class="center">
-      <input type="text" placeholder="Enter the currency code" class="input" />
+      <input type="text" placeholder="Enter the currency code" class="input" [(ngModel)]="currency" [ngModelOptions]="{standalone: true}"/>
     </div>
     <div class="center">
-      <button fill="clear">
+      <button fill="clear" [disabled]="!currency">
         EXCHANGE RESULT
       </button>
     </div>
