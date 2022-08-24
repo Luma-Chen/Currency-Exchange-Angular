@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ApisService } from '../apis.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
@@ -11,31 +10,16 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'my-app';
-  from_symbol: string = '';
-  to_symbol: string = '';
+  fromSymbol: string = '';
   http: any;
   currency:string= '';
 
-  constructor(
-    private apisService: ApisService,
-    private route: ActivatedRoute,
-    form: FormBuilder, 
-  ) {}
+  constructor(private forms: FormBuilder) {}
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      this.apisService.getExchangeRate().subscribe(
-        (sucesso) => {
-          console.log(sucesso);
-        },
-        (erro) => {
-          console.log(erro);
-        }
-      );
+      this.fromSymbol= this.currency;
     }
   }
-
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {});
-  }
+  ngOnInit(): void {}
 }

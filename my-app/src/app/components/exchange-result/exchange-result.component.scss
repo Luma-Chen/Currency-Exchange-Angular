@@ -16,7 +16,7 @@
     font-weight: normal;
 }
 
-.align-right {    
+.alignStart {    
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -27,7 +27,7 @@
     margin-top: -5rem;
 }
 
-.align-left {
+.alignEnd {
     display: flex;
     justify-content: flex-end;
 }
@@ -40,6 +40,11 @@ button {
     background-color: transparent;
     font-size: 3rem;
     font-weight: 100;
+}
+
+.minus {
+    width: 1.5rem;
+    height: 2rem;
 }
 
 .color {

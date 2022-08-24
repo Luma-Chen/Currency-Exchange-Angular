@@ -1,22 +1,26 @@
 <div class="container">
   <div class="line"></div>
-  <div class="align-right">
+  <div class="alignStart">
     <div class="size">Exchange rate now</div>
     <h3 class="time">09/03/2022 - 15h09</h3>
   </div>
-  <div class="align-left marginCurrency color bolder">
-    <h1>USD/BRL</h1>
+  <div class="alignEnd marginCurrency color bolder">
+    <h1>{{response?.fromSymbol.toUpperCase()}}/BRL</h1>
   </div>
+
   <div class="rectangle">
-    <h1 class="color bolder center">R$ 5,00</h1>
+    <h1 class="color bolder center" *ngIf="response"> {{response?.exchangeRate}} </h1>
   </div>
 
   <div class="row">
-    <h2 class= "margin align-right">LAST 30 DAYS</h2>
-    <div class= "align-left">
-      <button id="expandButton" (click)="expand()" class="color button"> + </button>
+    <h2 class= "margin alignStart">LAST 30 DAYS</h2>
+    <div class= "alignEnd">
+      <button id="expandButton" *ngIf="!showCards" (click)="expand()" class="color"> + </button>
+      <button id="expandButton" *ngIf="showCards" (click)="contract()">
+        <img class="minus" src="../../assets/Icon.svg">
+      </button>
     </div>
   </div>
-  <div class="lineBlue"></div>
-  <app-cards *ngIf="cards"></app-cards>
+  <div *ngIf="!showCards" class="lineBlue"></div>
+  <app-cards *ngIf="showCards"></app-cards>
 </div>

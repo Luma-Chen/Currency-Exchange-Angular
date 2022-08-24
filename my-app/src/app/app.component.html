@@ -12,7 +12,9 @@
     (ngSubmit)="onSubmit(formCurrency)"
   >
     <div class="center">
-      <input type="text" placeholder="Enter the currency code" class="input" [(ngModel)]="currency" [ngModelOptions]="{standalone: true}"/>
+      <input type="text" placeholder="Enter the currency code" *ngIf="!formCurrency.submitted" label= "Enter the currency code" class="input" [(ngModel)]="currency" [ngModelOptions]="{standalone: true}"/>
+
+      <input type="text" placeholder="Enter the currency code" name= "Enter the currency code" *ngIf="formCurrency.submitted" class="inputSubmitted"[(ngModel)]="currency" [ngModelOptions]="{standalone: true}"/>
     </div>
     <div class="center">
       <button fill="clear" [disabled]="!currency">
@@ -21,7 +23,6 @@
     </div>
   </form>
 
-  <app-exchange-result *ngIf="formCurrency.submitted"></app-exchange-result>
-
+  <app-exchange-result [currency]="fromSymbol" *ngIf="formCurrency.submitted"></app-exchange-result>
   <app-footer></app-footer>
 </div>

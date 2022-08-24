@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { NgxLoadingModule, ngxLoadingAnimationTypes } from "ngx-loading";
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,6 +16,12 @@ import { HttpClientModule} from '@angular/common/http';
     AppRoutingModule, 
     ComponentsModule,
     FormsModule,
+    NgxLoadingModule.forRoot({
+      backdropBackgroundColour: "rgba(0,0,0,0.1)",
+      backdropBorderRadius: "4px",
+      primaryColour: "#ffffff",
+      secondaryColour: "#ffffff",
+      tertiaryColour: "#ffffff",}),
     HttpClientModule
   ],
   providers: [HttpClientModule],

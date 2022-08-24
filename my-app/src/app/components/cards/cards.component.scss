@@ -1,0 +1,62 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1rem;
+    font-family: 'Roboto';
+    background-color: #F4F4F4;
+    font-family: 'Roboto';
+}
+
+.box {
+    width: 85%;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin {
+    margin: 1rem;
+}
+
+.small {
+    font-size: small;
+}
+
+.alignEnd {
+    display: flex;
+    align-self: baseline;
+}
+
+.color {
+    color: #07B0FB;
+    font-weight: bolder;
+}
+
+.bold {
+    font-weight: bold;
+    color: red;
+}
+
+.alignStart {    
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-self: baseline;
+}
+
+.align {
+    margin-left: 0.5rem;
+    margin-top: -0.2rem;
+}

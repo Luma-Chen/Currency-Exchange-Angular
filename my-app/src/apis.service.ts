@@ -12,12 +12,12 @@ export class ApisService {
     private http: HttpClient
   ) {}
 
-  getExchangeRate(){
-    return this.http.get(baseUrl + "/open/currentExchangeRate{RVZG0GHEV2KORLNA,from_symbol,to_symbol}")
+  getExchangeRate(fromSymbol:string){
+    return this.http.get(baseUrl + "/open/currentExchangeRate?apiKey=RVZG0GHEV2KORLNA&from_symbol=" + fromSymbol + "&to_symbol=BRL");
   }
 
-  getCurrencyValue(){
-   this.getExchangeRate().subscribe(
+  getCurrencyValue(fromSymbol:string){
+   this.getExchangeRate(fromSymbol).subscribe(
     success =>{
         console.log(success)
     },
