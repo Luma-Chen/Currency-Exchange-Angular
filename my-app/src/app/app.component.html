@@ -23,6 +23,7 @@
     </div>
   </form>
 
+  <router-outlet></router-outlet>
   <app-exchange-result [currency]="fromSymbol" *ngIf="formCurrency.submitted"></app-exchange-result>
   <app-footer></app-footer>
 </div>
